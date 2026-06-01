@@ -1,11 +1,9 @@
 ---
 id: ai-studio-reflection
 section: studio
-navTitle: Studio reflection
-title: "Reflection: what did tool making require?"
+navTitle: "Reflection on Google AI Studio"
+title: "Reflection on Google AI Studio"
 layout: reflection
-notes: "Bring discussion back to learning design, governance, accessibility, and support."
-participantPrompt: "What knowledge did the prototype assume you already had?"
 blocks:
   - type: reflection
     questions:

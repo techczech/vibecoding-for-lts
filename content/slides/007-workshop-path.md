@@ -1,11 +1,9 @@
 ---
 id: workshop-path
 section: landscape
-navTitle: Workshop path
-title: "The workshop moves from playful build to platform workflow."
+navTitle: "Getting started"
+title: "Getting started"
 layout: process
-notes: "Preview the hands-on sequence so participants can attach each demo to a purpose."
-participantPrompt: "Which step feels most directly connected to your current work?"
 blocks:
   - type: process
     steps:

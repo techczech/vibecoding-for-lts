@@ -1,12 +1,10 @@
 ---
 id: codex-downloads
 section: codex
-navTitle: Codex folder
-title: "Step 2: let Codex work inside a folder."
+navTitle: "Step 2: Codex"
+title: "Step 2: Codex"
 layout: exercise
 exerciseId: "02-codex-downloads-visualisation"
-notes: "Use synthetic sample files first. The private Downloads folder is a useful metaphor, not a public exercise dataset."
-participantPrompt: "What folder on your machine would benefit from analysis, cleanup, or visualisation?"
 blocks:
   - type: exercise
     title: "Hands-on task"

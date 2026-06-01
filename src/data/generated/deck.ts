@@ -102,11 +102,9 @@ export const deckData = {
     {
       "id": "title",
       "section": "orientation",
-      "navTitle": "Title",
+      "navTitle": "Vibecoding for Learning Technologists",
       "title": "Vibecoding for Learning Technologists",
       "layout": "title",
-      "notes": "Frame this as a practical session about what becomes possible when AI can make tools and use tools inside real education workflows.",
-      "participantPrompt": "What course-support task would you like AI to help with by the end of the session?",
       "blocks": [
         {
           "type": "callout",
@@ -124,11 +122,9 @@ export const deckData = {
     {
       "id": "current-state",
       "section": "orientation",
-      "navTitle": "Current state",
-      "title": "The interesting shift is not just better chat.",
+      "navTitle": "What is the current state of AI",
+      "title": "What is the current state of AI",
       "layout": "statement",
-      "notes": "Name the shift gently: chatbots remain useful, but the live question is what happens when AI can act through tools.",
-      "participantPrompt": "Where do you currently draw the line between advice, automation, and delegated work?",
       "blocks": [
         {
           "type": "bullets",
@@ -150,11 +146,9 @@ export const deckData = {
     {
       "id": "role-evolution",
       "section": "orientation",
-      "navTitle": "Roles",
-      "title": "AI roles keep accumulating.",
+      "navTitle": "Evolution of roles",
+      "title": "Evolution of roles",
       "layout": "process",
-      "notes": "Do not present these as historical eras that replace each other. They stack.",
-      "participantPrompt": "Which role is already useful to you, and which one feels least familiar?",
       "blocks": [
         {
           "type": "process",
@@ -191,11 +185,9 @@ export const deckData = {
     {
       "id": "model-and-harness",
       "section": "orientation",
-      "navTitle": "Model + harness",
-      "title": "Separate the model from the harness.",
+      "navTitle": "Things you should know",
+      "title": "Things you should know",
       "layout": "comparison",
-      "notes": "This is the conceptual anchor for the session. It makes Codex, Claude Code, AI Studio, Lovable, and Canvas workflows easier to compare.",
-      "participantPrompt": "When an AI tool impresses you, is the model impressive, the harness impressive, or both?",
       "blocks": [
         {
           "type": "columns",
@@ -228,12 +220,10 @@ export const deckData = {
     {
       "id": "model-landscape-refresh",
       "section": "landscape",
-      "navTitle": "Model refresh",
-      "title": "The model list is a freshness task.",
+      "navTitle": "Current top models",
+      "title": "Current top models",
       "layout": "checklist",
       "reviewStatus": "refresh-before-session",
-      "notes": "The draft outline named specific current top models. Refresh this slide shortly before delivery rather than treating those names as stable.",
-      "participantPrompt": "What evidence would make you trust a claim that one model is better for your work?",
       "blocks": [
         {
           "type": "callout",
@@ -262,11 +252,9 @@ export const deckData = {
     {
       "id": "harnesses",
       "section": "landscape",
-      "navTitle": "Harnesses",
-      "title": "Harnesses decide what AI can do in practice.",
+      "navTitle": "Current top harnesses",
+      "title": "Current top harnesses",
       "layout": "comparison",
-      "notes": "Use examples familiar to participants but avoid turning this into a vendor ranking.",
-      "participantPrompt": "Which harness category would be easiest to introduce safely in your team?",
       "blocks": [
         {
           "type": "columns",
@@ -301,11 +289,9 @@ export const deckData = {
     {
       "id": "workshop-path",
       "section": "landscape",
-      "navTitle": "Workshop path",
-      "title": "The workshop moves from playful build to platform workflow.",
+      "navTitle": "Getting started",
+      "title": "Getting started",
       "layout": "process",
-      "notes": "Preview the hands-on sequence so participants can attach each demo to a purpose.",
-      "participantPrompt": "Which step feels most directly connected to your current work?",
       "blocks": [
         {
           "type": "process",
@@ -342,12 +328,10 @@ export const deckData = {
     {
       "id": "ai-studio-build",
       "section": "studio",
-      "navTitle": "AI Studio build",
-      "title": "Step 1: make a small learning object.",
+      "navTitle": "Step 1: Google AI Studio",
+      "title": "Step 1: Google AI Studio",
       "layout": "exercise",
       "exerciseId": "01-ai-studio-h5p",
-      "notes": "Ask participants to think of a familiar H5P activity, then ask AI Studio to recreate the interaction as a small web app.",
-      "participantPrompt": "What activity pattern would you ask AI Studio to recreate?",
       "blocks": [
         {
           "type": "exercise",
@@ -369,11 +353,9 @@ export const deckData = {
     {
       "id": "ai-studio-reflection",
       "section": "studio",
-      "navTitle": "Studio reflection",
-      "title": "Reflection: what did tool making require?",
+      "navTitle": "Reflection on Google AI Studio",
+      "title": "Reflection on Google AI Studio",
       "layout": "reflection",
-      "notes": "Bring discussion back to learning design, governance, accessibility, and support.",
-      "participantPrompt": "What knowledge did the prototype assume you already had?",
       "blocks": [
         {
           "type": "reflection",
@@ -395,12 +377,10 @@ export const deckData = {
     {
       "id": "codex-downloads",
       "section": "codex",
-      "navTitle": "Codex folder",
-      "title": "Step 2: let Codex work inside a folder.",
+      "navTitle": "Step 2: Codex",
+      "title": "Step 2: Codex",
       "layout": "exercise",
       "exerciseId": "02-codex-downloads-visualisation",
-      "notes": "Use synthetic sample files first. The private Downloads folder is a useful metaphor, not a public exercise dataset.",
-      "participantPrompt": "What folder on your machine would benefit from analysis, cleanup, or visualisation?",
       "blocks": [
         {
           "type": "exercise",
@@ -422,11 +402,9 @@ export const deckData = {
     {
       "id": "codex-reflection",
       "section": "codex",
-      "navTitle": "Codex reflection",
-      "title": "Reflection: what changed on the desktop?",
+      "navTitle": "Reflections on Codex",
+      "title": "Reflections on Codex",
       "layout": "reflection",
-      "notes": "Connect this back to trust, review, permissions, and local working habits.",
-      "participantPrompt": "What would make you comfortable letting an agent touch local files?",
       "blocks": [
         {
           "type": "reflection",
@@ -448,12 +426,10 @@ export const deckData = {
     {
       "id": "canvas-sandbox",
       "section": "canvas",
-      "navTitle": "Canvas sandbox",
-      "title": "Step 3: connect Codex to a Canvas sandbox.",
+      "navTitle": "Step 3: Manage a Canvas course with Codex",
+      "title": "Step 3: Manage a Canvas course with Codex",
       "layout": "exercise",
       "exerciseId": "03-canvas-sandbox-page",
-      "notes": "Use a sandbox course and a scoped API token. Do not demonstrate with live student data.",
-      "participantPrompt": "Which Canvas task would be safe enough to test in a sandbox first?",
       "blocks": [
         {
           "type": "exercise",
@@ -481,11 +457,9 @@ export const deckData = {
     {
       "id": "canvas-reflection",
       "section": "canvas",
-      "navTitle": "Canvas reflection",
-      "title": "Reflection: what changes for Canvas users?",
+      "navTitle": "Reflections on Codex and Canvas",
+      "title": "Reflections on Codex and Canvas",
       "layout": "reflection",
-      "notes": "Use this to surface the new support questions: credentials, templates, approvals, accessibility, and rollback.",
-      "participantPrompt": "What would a safe Canvas agent workflow need in your context?",
       "blocks": [
         {
           "type": "reflection",
@@ -507,12 +481,10 @@ export const deckData = {
     {
       "id": "single-html-canvas",
       "section": "canvas",
-      "navTitle": "Single HTML",
-      "title": "Step 4: package the activity as one HTML file.",
+      "navTitle": "Step 4: Bring it all together",
+      "title": "Step 4: Bring it all together",
       "layout": "exercise",
       "exerciseId": "04-single-html-canvas-embed",
-      "notes": "This is the bridge between AI-made web prototypes and deployable learning materials.",
-      "participantPrompt": "What makes a single HTML activity easier or harder to support than a normal web app?",
       "blocks": [
         {
           "type": "exercise",
@@ -544,26 +516,21 @@ export const deckData = {
     {
       "id": "codex-practices",
       "section": "practice",
-      "navTitle": "Practices",
-      "title": "Step 5: make Codex work repeatable.",
-      "layout": "checklist",
-      "notes": "This is the bridge to sustainable practice rather than one-off demos.",
-      "participantPrompt": "Which one habit would make your next agent session safer or easier?",
+      "navTitle": "Reflections on Codex and Canvas part 2",
+      "title": "Reflections on Codex and Canvas part 2",
+      "layout": "reflection",
       "blocks": [
         {
-          "type": "bullets",
-          "title": "Working habits",
-          "items": [
-            "Work in folders.",
-            "Keep an AGENTS.md file in every project.",
-            "Write instructions in Markdown files.",
-            "Ask Codex to keep a task log.",
-            "Use skills for repeatable actions.",
-            "Learn from other people's skills."
+          "type": "reflection",
+          "questions": [
+            "What will be the new role of UI / backend?",
+            "How can we support this use of Canvas?",
+            "What infrastructure do we need to take advantage of this?",
+            "What more knowledge to LTs need?"
           ]
         }
       ],
-      "body": "The real productivity gain is not one spectacular prompt. It is a folder where\nfuture work can resume cleanly.",
+      "body": "The reflection returns to Canvas after the single HTML step.",
       "sourcePath": "content/slides/015-codex-practices.md",
       "sectionId": "practice",
       "sectionTitle": "Practices",
@@ -572,25 +539,29 @@ export const deckData = {
     {
       "id": "closing",
       "section": "practice",
-      "navTitle": "Closing",
-      "title": "Learning technologists become the bridge.",
-      "layout": "statement",
-      "notes": "Close by naming the role: not passive recipients of AI tools, but people who can shape how those tools enter learning environments.",
-      "participantPrompt": "What is one workflow you now want to prototype, and what guardrail should come with it?",
+      "navTitle": "Step 5: Set up good Codex practices",
+      "title": "Step 5: Set up good Codex practices",
+      "layout": "checklist",
       "blocks": [
         {
-          "type": "callout",
-          "tone": "key",
-          "title": "Working conclusion",
-          "body": "The new role is not to chase every tool. It is to understand which harnesses are safe, useful, supportable, and educationally meaningful."
+          "type": "bullets",
+          "title": "Getting started",
+          "items": [
+            "Work in folders",
+            "Keep an AGENTS.md file in every folder that describes what the folder is for",
+            "Keep instructions in Markdown files",
+            "Ask Codex to keep changelog",
+            "Set up skills for repeatable actions",
+            "Learn from other people's skills"
+          ]
         }
       ],
-      "body": "Vibecoding matters when it lets teams make better learning experiences without\nlosing judgement, supportability, or care.",
+      "body": "Set up good Codex practices.",
       "sourcePath": "content/slides/016-closing.md",
       "sectionId": "practice",
       "sectionTitle": "Practices",
       "sequence": 16
     }
   ],
-  "generatedAt": "2026-06-01T08:48:13.077Z"
+  "generatedAt": "2026-06-01T08:53:57.590Z"
 } satisfies DeckData;

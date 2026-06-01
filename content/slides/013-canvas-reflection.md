@@ -1,11 +1,9 @@
 ---
 id: canvas-reflection
 section: canvas
-navTitle: Canvas reflection
-title: "Reflection: what changes for Canvas users?"
+navTitle: "Reflections on Codex and Canvas"
+title: "Reflections on Codex and Canvas"
 layout: reflection
-notes: "Use this to surface the new support questions: credentials, templates, approvals, accessibility, and rollback."
-participantPrompt: "What would a safe Canvas agent workflow need in your context?"
 blocks:
   - type: reflection
     questions:

@@ -1,12 +1,10 @@
 ---
 id: single-html-canvas
 section: canvas
-navTitle: Single HTML
-title: "Step 4: package the activity as one HTML file."
+navTitle: "Step 4: Bring it all together"
+title: "Step 4: Bring it all together"
 layout: exercise
 exerciseId: "04-single-html-canvas-embed"
-notes: "This is the bridge between AI-made web prototypes and deployable learning materials."
-participantPrompt: "What makes a single HTML activity easier or harder to support than a normal web app?"
 blocks:
   - type: exercise
     title: "Hands-on task"

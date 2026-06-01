@@ -1,12 +1,10 @@
 ---
 id: model-landscape-refresh
 section: landscape
-navTitle: Model refresh
-title: "The model list is a freshness task."
+navTitle: "Current top models"
+title: "Current top models"
 layout: checklist
 reviewStatus: refresh-before-session
-notes: "The draft outline named specific current top models. Refresh this slide shortly before delivery rather than treating those names as stable."
-participantPrompt: "What evidence would make you trust a claim that one model is better for your work?"
 blocks:
   - type: callout
     tone: caution

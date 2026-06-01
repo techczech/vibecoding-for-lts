@@ -1,11 +1,9 @@
 ---
 id: current-state
 section: orientation
-navTitle: Current state
-title: "The interesting shift is not just better chat."
+navTitle: "What is the current state of AI"
+title: "What is the current state of AI"
 layout: statement
-notes: "Name the shift gently: chatbots remain useful, but the live question is what happens when AI can act through tools."
-participantPrompt: "Where do you currently draw the line between advice, automation, and delegated work?"
 blocks:
   - type: bullets
     title: "What has changed"

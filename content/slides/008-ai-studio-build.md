@@ -1,12 +1,10 @@
 ---
 id: ai-studio-build
 section: studio
-navTitle: AI Studio build
-title: "Step 1: make a small learning object."
+navTitle: "Step 1: Google AI Studio"
+title: "Step 1: Google AI Studio"
 layout: exercise
 exerciseId: "01-ai-studio-h5p"
-notes: "Ask participants to think of a familiar H5P activity, then ask AI Studio to recreate the interaction as a small web app."
-participantPrompt: "What activity pattern would you ask AI Studio to recreate?"
 blocks:
   - type: exercise
     title: "Hands-on task"

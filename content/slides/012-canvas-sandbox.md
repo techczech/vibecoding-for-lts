@@ -1,12 +1,10 @@
 ---
 id: canvas-sandbox
 section: canvas
-navTitle: Canvas sandbox
-title: "Step 3: connect Codex to a Canvas sandbox."
+navTitle: "Step 3: Manage a Canvas course with Codex"
+title: "Step 3: Manage a Canvas course with Codex"
 layout: exercise
 exerciseId: "03-canvas-sandbox-page"
-notes: "Use a sandbox course and a scoped API token. Do not demonstrate with live student data."
-participantPrompt: "Which Canvas task would be safe enough to test in a sandbox first?"
 blocks:
   - type: exercise
     title: "Hands-on task"
