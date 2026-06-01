@@ -132,6 +132,11 @@ button {
   border-color: rgba(23, 126, 137, 0.35);
 }
 
+.toolbar button[aria-pressed="true"] {
+  color: var(--magenta);
+  border-color: rgba(157, 47, 98, 0.34);
+}
+
 .slide-controls button:disabled {
   cursor: not-allowed;
   color: #9aa4b2;
@@ -145,6 +150,10 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
   gap: 1rem;
   padding: 1rem;
+}
+
+.deck-shell.notes-collapsed {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .stage {
