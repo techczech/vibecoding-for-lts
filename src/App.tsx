@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, List, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, List, PanelRightClose, PanelRightOpen, X } from "lucide-react";
 import { deckData } from "./data/generated/deck";
 import type { OutlineItem, Slide } from "./types";
 
@@ -85,6 +85,7 @@ export default function App() {
   });
   const [notes, setNotes] = useState<NotesState>(() => readStoredNotes());
   const [overviewOpen, setOverviewOpen] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(true);
 
   const currentSlide = slides[currentIndex] ?? slides[0];
   const progress = slides.length ? ((currentIndex + 1) / slides.length) * 100 : 0;
@@ -143,10 +144,17 @@ export default function App() {
           <button onClick={() => setOverviewOpen(true)}>
             <List size={18} aria-hidden="true" />
           </button>
+          <button onClick={() => setNotesOpen((current) => !current)} aria-pressed={notesOpen}>
+            {notesOpen ? (
+              <PanelRightClose size={18} aria-hidden="true" />
+            ) : (
+              <PanelRightOpen size={18} aria-hidden="true" />
+            )}
+          </button>
         </div>
       </header>
 
-      <main className="deck-shell">
+      <main className={`deck-shell ${notesOpen ? "" : "notes-collapsed"}`}>
         <section className="stage">
           <SlideView slide={currentSlide} />
           <div className="slide-controls">
@@ -166,12 +174,14 @@ export default function App() {
           </div>
         </section>
 
-        <aside className="notes-panel">
-          <textarea
-            value={notes[currentSlide.id] ?? ""}
-            onChange={(event) => setNotes((current) => ({ ...current, [currentSlide.id]: event.currentTarget.value }))}
-          />
-        </aside>
+        {notesOpen ? (
+          <aside className="notes-panel">
+            <textarea
+              value={notes[currentSlide.id] ?? ""}
+              onChange={(event) => setNotes((current) => ({ ...current, [currentSlide.id]: event.currentTarget.value }))}
+            />
+          </aside>
+        ) : null}
       </main>
 
       <footer className="statusbar">
