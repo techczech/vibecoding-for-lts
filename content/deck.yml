@@ -1,0 +1,52 @@
+schemaVersion: 1
+title: "Vibecoding for Learning Technologists"
+subtitle: "From AI tools to AI-supported course work"
+slug: "vibecoding-for-lts"
+session:
+  format: "hands-on workshop"
+  duration: "90 minutes"
+  audience: "learning technologists and digital education colleagues"
+  owner: "Dominik Lukes"
+  affiliation: "AI Competency Centre / OERC, University of Oxford"
+delivery:
+  pageTitle: "Vibecoding for Learning Technologists"
+  preferredExtension: ".html"
+  githubPages: true
+  noteExport:
+    jsonFileName: "vibecoding-for-lts-notes.json"
+    markdownFileName: "vibecoding-for-lts-notes.md"
+sections:
+  - id: orientation
+    title: "Orientation"
+    slides:
+      - title
+      - current-state
+      - role-evolution
+      - model-and-harness
+  - id: landscape
+    title: "Current Landscape"
+    slides:
+      - model-landscape-refresh
+      - harnesses
+      - workshop-path
+  - id: studio
+    title: "Google AI Studio"
+    slides:
+      - ai-studio-build
+      - ai-studio-reflection
+  - id: codex
+    title: "Codex On The Desktop"
+    slides:
+      - codex-downloads
+      - codex-reflection
+  - id: canvas
+    title: "Canvas And Course Work"
+    slides:
+      - canvas-sandbox
+      - canvas-reflection
+      - single-html-canvas
+  - id: practice
+    title: "Practices"
+    slides:
+      - codex-practices
+      - closing
