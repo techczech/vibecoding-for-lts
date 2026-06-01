@@ -1,11 +1,9 @@
 ---
 id: title
 section: orientation
-navTitle: Title
+navTitle: "Vibecoding for Learning Technologists"
 title: "Vibecoding for Learning Technologists"
 layout: title
-notes: "Frame this as a practical session about what becomes possible when AI can make tools and use tools inside real education workflows."
-participantPrompt: "What course-support task would you like AI to help with by the end of the session?"
 blocks:
   - type: callout
     tone: key

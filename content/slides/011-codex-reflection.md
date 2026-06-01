@@ -1,11 +1,9 @@
 ---
 id: codex-reflection
 section: codex
-navTitle: Codex reflection
-title: "Reflection: what changed on the desktop?"
+navTitle: "Reflections on Codex"
+title: "Reflections on Codex"
 layout: reflection
-notes: "Connect this back to trust, review, permissions, and local working habits."
-participantPrompt: "What would make you comfortable letting an agent touch local files?"
 blocks:
   - type: reflection
     questions:

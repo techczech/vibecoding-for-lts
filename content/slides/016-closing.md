@@ -1,17 +1,19 @@
 ---
 id: closing
 section: practice
-navTitle: Closing
-title: "Learning technologists become the bridge."
-layout: statement
-notes: "Close by naming the role: not passive recipients of AI tools, but people who can shape how those tools enter learning environments."
-participantPrompt: "What is one workflow you now want to prototype, and what guardrail should come with it?"
+navTitle: "Step 5: Set up good Codex practices"
+title: "Step 5: Set up good Codex practices"
+layout: checklist
 blocks:
-  - type: callout
-    tone: key
-    title: "Working conclusion"
-    body: "The new role is not to chase every tool. It is to understand which harnesses are safe, useful, supportable, and educationally meaningful."
+  - type: bullets
+    title: "Getting started"
+    items:
+      - "Work in folders"
+      - "Keep an AGENTS.md file in every folder that describes what the folder is for"
+      - "Keep instructions in Markdown files"
+      - "Ask Codex to keep changelog"
+      - "Set up skills for repeatable actions"
+      - "Learn from other people's skills"
 ---
 
-Vibecoding matters when it lets teams make better learning experiences without
-losing judgement, supportability, or care.
+Set up good Codex practices.

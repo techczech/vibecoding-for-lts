@@ -1,11 +1,9 @@
 ---
 id: harnesses
 section: landscape
-navTitle: Harnesses
-title: "Harnesses decide what AI can do in practice."
+navTitle: "Current top harnesses"
+title: "Current top harnesses"
 layout: comparison
-notes: "Use examples familiar to participants but avoid turning this into a vendor ranking."
-participantPrompt: "Which harness category would be easiest to introduce safely in your team?"
 blocks:
   - type: columns
     columns:

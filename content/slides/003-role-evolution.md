@@ -1,11 +1,9 @@
 ---
 id: role-evolution
 section: orientation
-navTitle: Roles
-title: "AI roles keep accumulating."
+navTitle: "Evolution of roles"
+title: "Evolution of roles"
 layout: process
-notes: "Do not present these as historical eras that replace each other. They stack."
-participantPrompt: "Which role is already useful to you, and which one feels least familiar?"
 blocks:
   - type: process
     steps:

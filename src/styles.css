@@ -194,12 +194,6 @@ button {
   font-weight: 800;
 }
 
-.review-pill {
-  margin-left: auto;
-  color: var(--amber);
-  font-weight: 700;
-}
-
 .slide-content {
   min-width: 0;
   min-height: 0;
@@ -398,14 +392,6 @@ button {
   line-height: 1.2;
 }
 
-.note-prompt {
-  margin: 0;
-  color: #344054;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-}
-
 .notes-panel textarea {
   min-width: 0;
   min-height: 14rem;
@@ -576,20 +562,6 @@ button {
 
 .slide-list small {
   color: var(--muted);
-}
-
-.presenter-drawer {
-  grid-template-rows: auto minmax(0, 1fr);
-}
-
-.presenter-copy {
-  overflow: auto;
-  color: #344054;
-  line-height: 1.5;
-}
-
-.presenter-copy code {
-  overflow-wrap: anywhere;
 }
 
 .export-live-region {

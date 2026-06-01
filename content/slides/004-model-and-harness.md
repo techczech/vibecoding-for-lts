@@ -1,11 +1,9 @@
 ---
 id: model-and-harness
 section: orientation
-navTitle: Model + harness
-title: "Separate the model from the harness."
+navTitle: "Things you should know"
+title: "Things you should know"
 layout: comparison
-notes: "This is the conceptual anchor for the session. It makes Codex, Claude Code, AI Studio, Lovable, and Canvas workflows easier to compare."
-participantPrompt: "When an AI tool impresses you, is the model impressive, the harness impressive, or both?"
 blocks:
   - type: columns
     columns:

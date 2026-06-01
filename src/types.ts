@@ -38,8 +38,6 @@ export type Slide = {
   navTitle?: string;
   title: string;
   layout: string;
-  notes?: string;
-  participantPrompt?: string;
   exerciseId?: string;
   reviewStatus?: string;
   blocks?: SlideBlock[];

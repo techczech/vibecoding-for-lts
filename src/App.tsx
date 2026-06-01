@@ -6,7 +6,6 @@ import {
   FileJson,
   FileText,
   List,
-  PanelRight,
   Presentation,
   Printer,
   Search,
@@ -19,7 +18,7 @@ import type { Slide, SlideBlock } from "./types";
 const noteStorageKey = `${deckData.slug}:participant-notes:v1`;
 
 type NotesState = Record<string, string>;
-type Drawer = "overview" | "presenter" | null;
+type Drawer = "overview" | null;
 
 function readStoredNotes(): NotesState {
   try {
@@ -51,7 +50,6 @@ function BlockRenderer({ block }: { block: SlideBlock }) {
   if (block.type === "callout") {
     return (
       <aside className={`callout callout-${block.tone ?? "plain"}`}>
-        <strong>{block.title}</strong>
         <p>{block.body}</p>
       </aside>
     );
@@ -60,7 +58,6 @@ function BlockRenderer({ block }: { block: SlideBlock }) {
   if (block.type === "bullets") {
     return (
       <div className="slide-block">
-        <h3>{block.title}</h3>
         <ul>
           {block.items.map((item) => (
             <li key={item}>{item}</li>
@@ -103,7 +100,6 @@ function BlockRenderer({ block }: { block: SlideBlock }) {
   if (block.type === "exercise") {
     return (
       <div className="exercise-block">
-        <h3>{block.title}</h3>
         <ol>
           {block.steps.map((step) => (
             <li key={step}>{step}</li>
@@ -127,8 +123,6 @@ function SlideView({ slide }: { slide: Slide }) {
     <article className={`slide slide-${slide.layout}`} aria-labelledby={`slide-title-${slide.id}`}>
       <div className="slide-kicker">
         <span>{String(slide.sequence).padStart(2, "0")}</span>
-        <span>{slide.sectionTitle}</span>
-        {slide.reviewStatus ? <span className="review-pill">Review</span> : null}
       </div>
       <div className="slide-content">
         <h1 id={`slide-title-${slide.id}`}>{slide.title}</h1>
@@ -148,11 +142,9 @@ function SlideView({ slide }: { slide: Slide }) {
 }
 
 function NotesPanel({
-  slide,
   value,
   onChange,
 }: {
-  slide: Slide;
   value: string;
   onChange: (value: string) => void;
 }) {
@@ -162,11 +154,10 @@ function NotesPanel({
         <StickyNote size={18} aria-hidden="true" />
         <h2>Notes</h2>
       </div>
-      <p className="note-prompt">{slide.participantPrompt}</p>
       <textarea
         value={value}
         onChange={(event) => onChange(event.currentTarget.value)}
-        aria-label={`Notes for slide ${slide.sequence}`}
+        aria-label="Participant notes"
         placeholder="Write session notes here..."
       />
     </aside>
@@ -188,7 +179,7 @@ function OverviewDrawer({
   const normalisedQuery = query.trim().toLowerCase();
   const results = slides.filter((slide) => {
     if (!normalisedQuery) return true;
-    return `${slide.title} ${slide.navTitle ?? ""} ${slide.sectionTitle} ${slide.body}`
+    return `${slide.title} ${slide.navTitle ?? ""} ${slide.body}`
       .toLowerCase()
       .includes(normalisedQuery);
   });
@@ -221,37 +212,9 @@ function OverviewDrawer({
           >
             <span>{String(slide.sequence).padStart(2, "0")}</span>
             <strong>{slide.navTitle ?? slide.title}</strong>
-            <small>{slide.sectionTitle}</small>
           </button>
         ))}
       </nav>
-    </aside>
-  );
-}
-
-function PresenterDrawer({ slide, onClose }: { slide: Slide; onClose: () => void }) {
-  return (
-    <aside className="drawer presenter-drawer" aria-label="Presenter notes">
-      <div className="drawer-header">
-        <div>
-          <span>Presenter Notes</span>
-          <h2>{slide.navTitle ?? slide.title}</h2>
-        </div>
-        <button className="icon-button" onClick={onClose} aria-label="Close presenter notes">
-          <X size={18} aria-hidden="true" />
-        </button>
-      </div>
-      <div className="presenter-copy">
-        <p>{slide.notes}</p>
-        {slide.exerciseId ? (
-          <p>
-            Exercise: <code>{slide.exerciseId}</code>
-          </p>
-        ) : null}
-        <p>
-          Source: <code>{slide.sourcePath}</code>
-        </p>
-      </div>
     </aside>
   );
 }
@@ -309,7 +272,6 @@ export default function App() {
       if (event.key === "Home") goToIndex(0);
       if (event.key === "End") goToIndex(slides.length - 1);
       if (event.key.toLowerCase() === "o") setDrawer("overview");
-      if (event.key.toLowerCase() === "n") setDrawer("presenter");
       if (event.key === "Escape") setDrawer(null);
     }
 
@@ -322,9 +284,7 @@ export default function App() {
       slides.map((slide) => ({
         slideId: slide.id,
         sequence: slide.sequence,
-        section: slide.sectionTitle,
         title: slide.title,
-        prompt: slide.participantPrompt ?? "",
         note: notes[slide.id] ?? "",
       })),
     [notes, slides],
@@ -359,10 +319,6 @@ export default function App() {
       ...notePayload.flatMap((entry) => [
         `## ${String(entry.sequence).padStart(2, "0")}. ${entry.title}`,
         "",
-        `Section: ${entry.section}`,
-        "",
-        entry.prompt ? `Prompt: ${entry.prompt}` : "",
-        "",
         entry.note || "_No notes recorded._",
         "",
       ]),
@@ -388,10 +344,6 @@ export default function App() {
           <button onClick={() => setDrawer("overview")} title="Overview">
             <List size={18} aria-hidden="true" />
             <span>Overview</span>
-          </button>
-          <button onClick={() => setDrawer("presenter")} title="Presenter notes">
-            <PanelRight size={18} aria-hidden="true" />
-            <span>Presenter</span>
           </button>
           <button onClick={() => window.print()} title="Print handout">
             <Printer size={18} aria-hidden="true" />
@@ -431,22 +383,19 @@ export default function App() {
         </section>
 
         <NotesPanel
-          slide={currentSlide}
           value={notes[currentSlide.id] ?? ""}
           onChange={(value) => setNotes((current) => ({ ...current, [currentSlide.id]: value }))}
         />
       </main>
 
       <footer className="statusbar">
-        <span>{currentSlide.sectionTitle}</span>
         <span>{currentSlide.navTitle ?? currentSlide.title}</span>
-        <span>{deckData.subtitle}</span>
+        <span>{String(currentIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
       </footer>
 
       {drawer === "overview" ? (
         <OverviewDrawer slides={slides} currentSlide={currentSlide} onClose={() => setDrawer(null)} onSelect={goToSlide} />
       ) : null}
-      {drawer === "presenter" ? <PresenterDrawer slide={currentSlide} onClose={() => setDrawer(null)} /> : null}
       {drawer ? <button className="drawer-scrim" aria-label="Close drawer" onClick={() => setDrawer(null)} /> : null}
       <div className="export-live-region" aria-live="polite">
         <Download size={1} aria-hidden="true" />
